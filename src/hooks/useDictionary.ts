@@ -23,7 +23,7 @@ const useDictionary = () => {
   }, []);
 
   const getWord = (searchTerm: string) => {
-    if (!searchTerm) return data;
+    if (!searchTerm) return [];
 
     return data.filter((item) =>
       item.word.toLowerCase().includes(searchTerm.toLowerCase()),

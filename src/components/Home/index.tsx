@@ -11,7 +11,6 @@ const Index = () => {
 
   const handleClick = () => {
     const res = getWord(search);
-    console.log(res);
     if (res && res.length > 0) {
       setDefination(res[0].meaning);
     } else {
