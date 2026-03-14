@@ -13,6 +13,8 @@ const Index = () => {
     const res = getWord(search);
     if (res.length > 0) {
       setDefination(res[0].meaning);
+    } else {
+      setDefination("Word not found in the dictionary.");
     }
   };
   return (
@@ -27,13 +29,7 @@ const Index = () => {
         <Button onClick={handleClick} label="Search" />
       </div>
       <h3 className="word_text">Definition:</h3>
-      <p className="definition">
-        {!search
-          ? ""
-          : definition
-            ? definition
-            : "Word not found in the dictionary."}
-      </p>
+      <p className="definition">{definition}</p>
     </Layout>
   );
 };
