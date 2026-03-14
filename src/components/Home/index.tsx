@@ -11,7 +11,8 @@ const Index = () => {
 
   const handleClick = () => {
     const res = getWord(search);
-    if (res.length > 0) {
+    console.log(res);
+    if (res && res.length > 0) {
       setDefination(res[0].meaning);
     } else {
       setDefination("Word not found in the dictionary.");
